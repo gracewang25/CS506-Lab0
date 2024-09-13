@@ -13,12 +13,12 @@ def test_dot_product():
     assert result == 32, f"Expected 32, but got {result}"
     
 def test_cosine_similarity():
-    vector1 = np.array([1, 2, 3])
-    vector2 = np.array([4, 5, 6])
+    v1 = np.array([1, 2, 3])
+    v2 = np.array([4, 5, 6])
 
-    result = cosine_similarity(vector1, vector2)
+    result = cosine_similarity(v1, v2)
     
-    expected_result = np.dot(vector1, vector2) / (np.linalg.norm(vector1) * np.linalg.norm(vector2))
+    expected_result = np.dot(v1, v2) / (np.linalg.norm(vector1) * np.linalg.norm(vector2))
     
     assert np.isclose(result, expected_result), f"Expected {expected_result}, but got {result}"
 
