@@ -18,7 +18,7 @@ def test_cosine_similarity():
 
     result = cosine_similarity(v1, v2)
     
-    expected_result = np.dot(v1, v2) / (np.linalg.norm(vector1) * np.linalg.norm(vector2))
+    expected_result = np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
     
     assert np.isclose(result, expected_result), f"Expected {expected_result}, but got {result}"
 
